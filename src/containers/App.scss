@@ -1,12 +1,87 @@
+@import '../scss/mixins.scss';
+
+* {
+    box-sizing: border-box;
+}
+
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100vw;
     height: 100vh;
 }
 
-// Portfolio version number (Will be in footer later)
-.port-ver {
-    font-weight: bold;
+header {
+    position: absolute;
+}
+
+.hamburger {
+    margin: 20px;
+    height: 50px;
+    color: white;
+}
+
+// Landing (Main Content)
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #3a5dbf;
+    color: white;
+    width: 100vw;
+    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+
+    &__text {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+        padding-left: 25px;
+
+        h1 {
+            margin: 0;
+            width: auto;
+        }
+    }
+
+    &__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
+
+        img {
+            width: 225px;
+            height: 225px;
+            border-radius: 20px;
+        }
+    }
+}
+
+// .landing:before {
+//     content: '';
+//     position: absolute;
+//     height: 100%;
+//     width: 100vw;
+//     height: 500px;
+//     background: #3a5dbf;
+//     z-index: -1;
+// }
+
+// Footer 
+
+.footer {
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+
+    // Portfolio version number
+    p {
+        font-weight: bold;
+    }
 }
